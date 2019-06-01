@@ -41,8 +41,8 @@
                   <th scope="col"><?= $this->Paginator->sort('passkey') ?></th>
                   <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
                   <th scope="col"><?= $this->Paginator->sort('photo_dir') ?></th>
-                  <th scope="col"><?= $this->Paginator->sort('timeout') ?></th>
                   <th scope="col"><?= $this->Paginator->sort('role_id') ?></th>
+                  <th scope="col"><?= $this->Paginator->sort('timeout') ?></th>
                   <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                   <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                   <th scope="col" class="actions text-center"><?= __('Actions') ?></th>
@@ -60,8 +60,8 @@
                   <td><?= h($user->passkey) ?></td>
                   <td><?= h($user->photo) ?></td>
                   <td><?= h($user->photo_dir) ?></td>
-                  <td><?= h($user->timeout) ?></td>
                   <td><?= $user->has('role') ? $this->Html->link($user->role->name, ['controller' => 'Roles', 'action' => 'view', $user->role->id]) : '' ?></td>
+                  <td><?= h($user->timeout) ?></td>
                   <td><?= h($user->created) ?></td>
                   <td><?= h($user->modified) ?></td>
                   <td class="actions text-right">

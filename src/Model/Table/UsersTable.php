@@ -41,8 +41,7 @@ class UsersTable extends Table
         $this->addBehavior('Timestamp');
 
         $this->belongsTo('Roles', [
-            'foreignKey' => 'role_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'role_id'
         ]);
     }
 
@@ -60,20 +59,19 @@ class UsersTable extends Table
 
         $validator
             ->scalar('name')
-            ->maxLength('name', 100)
+            ->maxLength('name', 255)
             ->requirePresence('name', 'create')
             ->allowEmptyString('name', false);
 
         $validator
             ->scalar('apelido')
-            ->maxLength('apelido', 100)
+            ->maxLength('apelido', 255)
             ->requirePresence('apelido', 'create')
             ->allowEmptyString('apelido', false);
 
         $validator
             ->email('email')
-            ->requirePresence('email', 'create')
-            ->allowEmptyString('email', false);
+            ->allowEmptyString('email');
 
         $validator
             ->scalar('username')
@@ -89,9 +87,8 @@ class UsersTable extends Table
 
         $validator
             ->scalar('passkey')
-            ->maxLength('passkey', 13)
-            ->requirePresence('passkey', 'create')
-            ->allowEmptyString('passkey', false);
+            ->maxLength('passkey', 255)
+            ->allowEmptyString('passkey');
 
         $validator
             ->scalar('photo')

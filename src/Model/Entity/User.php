@@ -9,14 +9,14 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property string $name
  * @property string $apelido
- * @property string $email
+ * @property string|null $email
  * @property string $username
  * @property string $password
- * @property string $passkey
+ * @property string|null $passkey
  * @property string|null $photo
  * @property string|null $photo_dir
+ * @property int|null $role_id
  * @property \Cake\I18n\FrozenTime|null $timeout
- * @property int $role_id
  * @property \Cake\I18n\FrozenTime|null $created
  * @property \Cake\I18n\FrozenTime|null $modified
  *
@@ -42,6 +42,7 @@ class User extends Entity
         'passkey' => true,
         'photo' => true,
         'photo_dir' => true,
+        'role_id' => true,
         'timeout' => true,
         'created' => true,
         'modified' => true,

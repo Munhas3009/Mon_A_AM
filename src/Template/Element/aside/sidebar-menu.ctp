@@ -13,13 +13,7 @@
     <ul class="treeview-menu">
       <li><a href="<?php echo $this->Url->build('/users'); ?>"><i class="fa fa-circle-o"></i> Utilizadores </a></li>
       <li><a href="<?php echo $this->Url->build('/roles'); ?>"><i class="fa fa-circle-o"></i> Grupos </a></li>
-      <li><a href="<?php echo $this->Url->build('/actions'); ?>"><i class="fa fa-circle-o"></i> Funções </a></li>
-      <li><a href="<?php echo $this->Url->build('/controllers'); ?>"><i class="fa fa-circle-o"></i> Controladores </a></li>
-       <li><a href="<?php echo $this->Url->build('/aros'); ?>"><i class="fa fa-circle-o"></i> Requisição de Acesso </a></li>
-      <li><a href="<?php echo $this->Url->build('/acos'); ?>"><i class="fa fa-circle-o"></i> Controlo de Acesso </a></li>
-      <li><a href="<?php echo $this->Url->build('/acosroles'); ?>"><i class="fa fa-circle-o"></i> Permissões </a></li>
-     
-        
+              
     </ul>
   </li>
   
